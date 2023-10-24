@@ -1,14 +1,23 @@
 <html>
     <head>
         <title> Receitas brasileiras </title>
-        <link rel = "stylesheet" href = "output.css">
+        <link rel = "stylesheet" href = "styles.css">
         <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel = 'stylesheet'>
     </head>
     <body>
-        <i class = 'bx bxs-bowl-hot'></i>
-        <h1 class> Receitas Brasileiras </h1>
-        <img src = "/assets/images/brazillian_plates.jpg" alt = "Brazilian Plates">
-        <p> A culinária, em sua essência, trata-se da arte de preparar alimentos. Por muito tempo, a comida foi tratada pela raça humana apenas como um meio fundamental para a sobrevivência, mas com o desenvolvimento da civilização, surge um novo ponto de vista sob a comida - ganhando um aspecto sofisticado com a elaboração de pratos através de temperos, ingredientes e cores, que variam de acordo com a cultura de um povo. </p>
-        <p> A culinária brasileira começa a tomar forma durante o período da colonização, época na qual os ingredientes de diversas culturas - portuguesas, indígenas e africanas, começaram a se misturar e formar o que conhecemos nos dias de hoje. </p>
+        <!----------- Top ----------->
+        <div class = 'h-480 w-full flex flex-col justify-evenly bg-orange-300'>
+            <div class = "flex text-5xl ml-10">
+                <h1 class = 'text-5xl ml-6'> <i class = 'bx bxs-bowl-hot'></i> Receitas Brasileiras </h1>
+            </div>
+            <div class = "flex w-full justify-center"> 
+                <div class = " text-xl flex flex-col justify-center w-128 bg-white p-5 shadow-lg">
+                    <span> A culinária, em sua essência, trata-se da arte de preparar alimentos. Por muito tempo, a comida foi tratada pela raça humana apenas como um meio fundamental para a sobrevivência, mas com o desenvolvimento da civilização, surge um novo ponto de vista sob a comida - ganhando um aspecto sofisticado com a elaboração de pratos através de temperos, ingredientes e cores, que variam de acordo com a cultura de um povo. </span> <br>
+                    <span> A culinária brasileira começa a tomar forma durante o período da colonização, época na qual os ingredientes de diversas culturas - portuguesas, indígenas e africanas, começaram a se misturar e formar o que conhecemos nos dias de hoje. </span>
+                </div>
+                <div class = 'h-full border-4 border-black mt-2'></div>
+                <div id = 'img' class = "ml-4 w-480 h-96"> <img src = "/assets/images/brazillian_plates.jpg"></div>
+            </div>
+        </div>
     </body>
 </html>
