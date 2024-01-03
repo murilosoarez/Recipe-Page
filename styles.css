@@ -9,14 +9,35 @@ a {
     color: white;
 }
 
+:root.dark {
+    --background-main-color: rgb(39, 39, 39);
+    --font-main-color: rgb(207, 207, 207);
+
+    --background-title-bottom-color: black;
+
+    --border-card: 1px dotted rgb(202, 202, 202);
+}
+
+:root.light {
+    --background-main-color: rgb(248, 248, 248);
+    --font-main-color: rgb(39, 39, 39);
+
+    --background-title-bottom-color: grey;
+    --font-title-bottom-color: black;
+
+    --border-card: 1px dotted black;
+}
+
 .Main.Content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 100vw;
-    height: 210vh;
-    background: black;
-    color: white;
+    height: 225vh;
+    background: var(--background-main-color);
+    color: var(--font-main-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 .Main.Content .Main.Title {
@@ -24,17 +45,31 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: rgb(15, 15, 15);
-    font-size: 1.2rem;
-    height: 150px;
+    height: 200px;
+    font-size: 2rem;
+    background: var(--background-title-bottom-color);
+    color: var(--font-title-bottom-color);
+    font-family: 'Long Cang', cursive;
+
 }
 
+.Main.Content .Main.Title #light-toggle {
+    position: relative;
+    left: 600px;
+    width: 60px;
+    height: 100%;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: var(--font-title-bottom-color);
+    cursor: pointer;
+}
 
 .Main.Content .Text.Culinary.Story {
     display: grid;
     width: 90%;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 150px 200px 220px 150px;
+    grid-template-rows: 200px 200px 220px 150px;
     gap: 10px;
     grid-template-areas: 
     "Paragraph-one Paragraph-one" 
@@ -50,6 +85,7 @@ a {
     text-align: center;
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 60px;
 }
 
 .Main.Content  .Text.Culinary.Story .Paragraph.Two {
@@ -131,21 +167,19 @@ a {
     display: grid; 
     align-content: center;
     justify-content: center;
-    gap: 50px;
-    grid-template-columns: repeat(5, 300px);
-    grid-template-rows: 500px;
     width: 100%;
-    height: 700px;
+    gap: 50px;
+    grid-template-columns: repeat(5, 310px);
+    grid-template-rows: 500px;
 }
 
 .Main.Content .Plate {
-    border: 1px dotted white;
+    border: var(--border-card);
     border-radius: 25px;
 }
 
 .Main.Content .Plate .Plate.Image {
     height: 70%;
-    background: white;
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
 }
@@ -180,13 +214,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(19, 19, 19);
+    position: absolute;
+    bottom: 0px;
     width: 100%;
-    height: 35px;
+    height: 45px;
+    background: var(--background-title-bottom-color);
+    color: var(--font-title-bottom-color)
 }
 
-.Main.Content .Bottom.Content img {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
+.Main.Content .Bottom.Content img{
+    display: flex;
+    align-self: center;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
 }
