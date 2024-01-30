@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.Main.Container {
+    width: 100vw;
+    height: auto;
+    font-size: 1rem;
+    border: 5px solid black;
+}
+
+.Main.Container .Page.Header {
+    height: 200px;
+    background-image: url("images/culinary.jpg");
+    background-size: cover;
+}
+
+.Main.Container .Page.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 3%;
+}
+
+.Main.Container .Page.Content .Title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2%;
+    width: auto;
+    background: tomato;
+}
+
+.Main.Container .Page.Content .Main.Content.Display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+    width: 90%;
+    height: 600px;
+    padding: 2%;
+    background: lightblue;
+}
+
+.Main.Container .Page.Content .Main.Content.Display > div  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: 3px solid black;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.Main.Container .Page.Content .Main.Content.Display .Text.Card.One {
+    padding: 2%;
+    gap: 5%;
+    grid-row: 1/4;
+    font-size: 2.5rem;
+}
+
+.Main.Container .Page.Content .Second.Content.Display {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    height: 500px;
+    width: 100%;
+    padding: 2%;
+    background: lightblue;
+}
+
+.Main.Container .Page.Content .Second.Content.Display .Image.Card  {
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.Main.Container .Page.Content .Second.Content.Display .Image.Card > h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    font-size: 2rem;
+}
+
+.Main.Container .Page.Content .Second.Content.Display .Image.Card .Image.Container {
+    background: lightpink;
+    height: 85%;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Main.Container .Page.Content .Second.Content.Display .Image.Card .Image.Container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Main.Container .Page.Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    background: lightpink;
+}
+
+.Main.Container .Page.Footer .Content > a > img {
+    height: 35px;
+    width: 35px;
+}
