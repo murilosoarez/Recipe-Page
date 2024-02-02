@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
-:root {
-    --light-theme-white: rgb(238, 238, 238);
-    --light-theme-bolder: rgb(243, 134, 0);
-    --light-theme-shadow: black
+:root.light {
+    --background-theme: rgb(238, 238, 238);
+    --bolder-theme: rgb(243, 134, 0);
+    --shadow-theme: black
+}
+
+:root.dark {
+    --main-background: rgb(30, 30, 30);
+    --background-theme: rgb(0, 0, 0);
+    --bolder-theme: rgb(45, 133, 255);
+    --shadow-theme: rgb(255, 255, 255);
+    --font-color: white;
 }
 
 html {
@@ -15,8 +23,8 @@ html {
 }
 
 strong {
-    color: var(--light-theme-bolder);
-    text-shadow: 1px 1px var(--light-theme-shadow);
+    color: var(--bolder-theme);
+    text-shadow: 1px 1px var(--shadow-theme);
 }
 
 @keyframes fadeIn {
@@ -30,6 +38,8 @@ strong {
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     animation: fadeIn 1s;
+    background: var(--main-background);
+    color: var(--font-color)
 }
 
 .Main.Container .Page.Header {
@@ -47,19 +57,39 @@ strong {
     padding: 3%;
 }
 
+
 .Main.Container .Page.Content .Title {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     text-align: center;
     font-style: italic;
     width: 100%;
     opacity: 0.8;
     padding: 2%;
     font-size: 2rem;
-    text-shadow: 1px 1px var(--light-theme-shadow);
-    color: var(--light-theme-bolder);
-    background: var(--light-theme-white);
+    text-shadow: 1px 1px var(--shadow-theme);
+    color: var(--bolder-theme);
+    background: var(--background-theme);
+}
+
+.Main.Container .Page.Content .Main.Title button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 5%;
+    top: 30%;
+    bottom: 20%;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+    color: var(--font-color);
+    text-shadow: var(--shadow-theme);
+    background: none;
 }
 
 .Main.Container .Page.Content .Main.Content.Display {
@@ -80,7 +110,7 @@ strong {
     padding: 3%;
     font-size: 2rem;
     overflow: hidden;
-    background: var(--light-theme-white)
+    background: var(--background-theme)
 }
 
 .Main.Container .Page.Content .Main.Content.Display .Text.Card.One {
@@ -97,7 +127,7 @@ strong {
     height: 500px;
     gap: 50px;
     padding: 2%;
-    background: var(--light-theme-white);
+    background: var(--background-theme);
 }
 
 .Main.Container .Page.Content .Second.Content.Display .Image.Card  {
@@ -113,7 +143,7 @@ strong {
     height: 15%;
     font-size: 2rem;
     border-radius: 0px 0px 25px 25px;
-    background-color: var(--light-theme-bolder);
+    background-color: var(--bolder-theme);
 }
 
 .Main.Container .Page.Content .Second.Content.Display .Image.Card .Image.Container {
@@ -135,7 +165,7 @@ strong {
     width: 100%;
     height: 50px;
     font-size: 1.5rem;
-    background: var(--light-theme-bolder);
+    background: var(--bolder-theme);
 }
 
 .Main.Container .Page.Footer .Content > a > img {
