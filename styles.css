@@ -1,174 +1,153 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-:root.light {
-    --background-theme: rgb(238, 238, 238);
-    --bolder-theme: rgb(243, 134, 0);
-    --shadow-theme: black
+:root {
+    --blue: rgb(45, 115, 255);
 }
 
-:root.dark {
-    --main-background: rgb(30, 30, 30);
-    --background-theme: rgb(0, 0, 0);
-    --bolder-theme: rgb(45, 133, 255);
-    --shadow-theme: rgb(255, 255, 255);
-    --font-color: white;
+
+/* Track */
+::-webkit-scrollbar-thumb:hover {
+    background: #f1f1f1;
 }
+
+
 
 html {
-    font-size: 62.5%;
+    font-size: 10px;
+    font-family: Roboto, sans-serif;
 }
 
-strong {
-    color: var(--bolder-theme);
-    text-shadow: 1px 1px var(--shadow-theme);
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-  
-.Main.Container {
-    width: 100vw;
-    height: auto;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    animation: fadeIn 1s;
-    background: var(--main-background);
-    color: var(--font-color)
-}
-
-.Main.Container .Page.Header {
-    height: 200px;
-    background-image: url("images/culinary.jpg");
-    background-size: cover;
-}
-
-.Main.Container .Page.Content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 3%;
-}
-
-
-.Main.Container .Page.Content .Title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+::-webkit-scrollbar {
+    background: var(--blue);
+    border-radius: 2.5em;
+    width: 0.5em;
     position: relative;
-    text-align: center;
-    font-style: italic;
-    width: 100%;
-    opacity: 0.8;
-    padding: 2%;
-    font-size: 2rem;
-    text-shadow: 1px 1px var(--shadow-theme);
-    color: var(--bolder-theme);
-    background: var(--background-theme);
+    right: 0px;
 }
 
-.Main.Container .Page.Content .Main.Title button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    right: 5%;
-    top: 30%;
-    bottom: 20%;
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 2.5em;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    font-weight: lighter;
+    color: white;
+}
+
+h1:hover {
+    color: blue;
+    animation: 3s ease-in;
+}
+
+h2 {
     font-size: 3rem;
-    border: none;
-    cursor: pointer;
-    color: var(--font-color);
-    text-shadow: var(--shadow-theme);
-    background: none;
+    letter-spacing: 1rem;
+    font-weight: lighter;
 }
 
-.Main.Container .Page.Content .Main.Content.Display {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 50px;
-    width: 90%;
-    padding: 2%;
-    height: 600px;
-}
-
-.Main.Container .Page.Content .Main.Content.Display > div  {
+h3 {
     display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
-    padding: 3%;
-    font-size: 2rem;
-    overflow: hidden;
-    background: var(--background-theme)
-}
-
-.Main.Container .Page.Content .Main.Content.Display .Text.Card.One {
-    padding: 2%;
-    gap: 5%;
-    grid-row: 1/4;
     font-size: 2.5rem;
+    background: white;
+    width: 95%;
+    color: var(--blue);
 }
 
-.Main.Container .Page.Content .Second.Content.Display {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    width: 100%;
-    height: 500px;
-    gap: 50px;
-    padding: 2%;
-    background: var(--background-theme);
-}
-
-.Main.Container .Page.Content .Second.Content.Display .Image.Card  {
-    border-radius: 25px;
-    border: 1px solid rgb(97, 97, 97);
-}
-
-.Main.Container .Page.Content .Second.Content.Display .Image.Card > h3 {
+.Main.Container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 15%;
-    font-size: 2rem;
-    border-radius: 0px 0px 25px 25px;
-    background-color: var(--bolder-theme);
+    gap: 5px;
+    height: 100vh;
+    width: 100vw;
+    background: #3e9433;
 }
 
-.Main.Container .Page.Content .Second.Content.Display .Image.Card .Image.Container {
-    height: 85%;
-    border-radius: 25px 25px 0px 0px;
-    background: rgb(242, 242, 242);
+.Main.Container .Main.Card {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 35% 35% 10% auto;
+    gap: 5%;
+    height: 80%;
+    width: 70%;
+    padding: 2%;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: rgb(250, 221, 61);
 }
 
-.Main.Container .Page.Content .Second.Content.Display .Image.Card .Image.Container img {
+.Main.Card > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background: white;
+    border-radius: 2.5em;
+}
+
+.Main.Card > div:nth-child(1) {
+    grid-row: 1/3;
+}
+
+.Main.Card > div:nth-child(4) {
+    grid-column: 1/3;
+} 
+
+.Main.Card > div:nth-child(5) {
+    grid-column: 1/3;
+} 
+
+.Main.Card .Image {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+}
+
+.Main.Card .Paragraph.One,
+.Main.Card .Paragraph.Two {
+    font-size: 1.5rem;
+    overflow: hidden;
+    color: var(--blue);
+}
+
+.Main.Card .Cards {
+    display: grid;
+    gap: 5%; 
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.Main.Card .Cards  > *{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    gap: 1em;
+    border-radius: 2em;
+    box-shadow: 1em 1em black;
+    color: white;
+    background: var(--blue);
+}
+
+.Main.Card .Cards .Recipe.Container {
+    width: 20em;
+    height: 15em;
+}
+
+.Main.Card .Cards .Recipe.Container img {
     width: 100%;
     height: 100%;
-    border-radius: 25px 25px 0px 0px;
 }
 
-.Main.Container .Page.Footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    background: var(--bolder-theme);
-}
-
-.Main.Container .Page.Footer .Content > a > img {
-    height: 35px;
-    width: 35px;
+.Main.Card .Cards  p {
+    font-size: 1.65em;
+    text-align: center;
 }
