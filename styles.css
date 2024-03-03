@@ -32,8 +32,6 @@ html {
 
 /* Track */
 
-
-
 h1 {
     font-size: 6rem;
     letter-spacing: 1rem;
@@ -92,8 +90,9 @@ h3 {
     justify-content: center;
     align-items: center;
     background: white;
-    border: 2px solid black;
     border-radius: 2.5em;
+    border: 2px solid rgb(201, 182, 128);
+    box-shadow: 0.1rem 0.1rem 0.2rem black;
 }
 
 .Main.Card > div:nth-child(1) {
@@ -117,7 +116,7 @@ h3 {
 
 .Main.Card .Paragraph.One,
 .Main.Card .Paragraph.Two {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     padding: 2%;
     overflow: hidden;
     color: var(--blue);
@@ -126,9 +125,9 @@ h3 {
 .Main.Card .Cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
+    background: rgb(255, 255, 255);
     gap: 5%; 
     padding: 3%;
-    background: white;
 }
 
 .Main.Card .Cards  > *{
@@ -136,11 +135,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     padding: 10%;
+    height: 40rem;
     gap: 1em;
     border-radius: 2em;
-    box-shadow: 1em 1em black;
     color: white;
     background: var(--blue);
+    box-shadow: 1em 1em black;
+    border: 2px solid black;
     transition: transform 0.3s;
 }
 
@@ -166,11 +167,7 @@ h3 {
     display: none;
 }
 
-.Main.Card .Cards > div:hover {
-    filter: blur(0px);
-}
-
-@media (max-width: 51rem) {
+@media (max-width: 85rem) {
     
     h1 {
         text-align: center;
@@ -179,9 +176,13 @@ h3 {
     .Main.Container .Main.Card {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 50% 50% 10% 280%;
-        font-size: 1.5vw;
+        grid-template-rows: 50% 50% 10% 400%;
         padding: 5%;
+    }
+
+    .Main.Card .Paragraph.One, 
+    .Main.Card .Paragraph.Two {
+        font-size: 1.75vw;
     }
 
     .Main.Container .Main.Card > div {
@@ -205,6 +206,8 @@ h3 {
     .Main.Card .Cards > div > h3 {
         font-size: 3rem;
     }
+}
 
-
+.Main.Card .Cards > div:hover {
+    background: rgb(41, 78, 182);
 }

@@ -9,5 +9,14 @@
     </ul>
 </div>
     <hr>
-    <p> This is the begginner's project made for the Odin Project Curriculum, an online course with a methodology focused on learning through practice. </p>
-    <p> I struggled with this one for a while because i kept wanting to keep implementing new stuff, but ultimately decided to make this project a low level practice experience using the essentials for every webpage - <strong> HTML </strong> and <strong> CSS. </strong> </p>
+    <br>
+    <p> This is the begginner's project made for the Odin Project Curriculum - a simple display of Recipes made with the essentials of a webpage - <strong> HTML </strong> and <strong> CSS! </strong> From the get go, i wanted the project to be about Brazil's culinary and history, one of my favorite subjects. </p>
+    <p>In this project, i learned and used for the first time:  </p>
+    <ul>
+        <li> Media Query for responsive behavior</li>
+        <li> CSS Events for interactive behaviorr</li>
+    </ul>
+    <br>
+    <img src = "images/page.png">
+     
+
